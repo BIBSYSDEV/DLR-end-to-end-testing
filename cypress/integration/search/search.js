@@ -1,15 +1,15 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
+import DLRMainPage from '../../pages/DLRMainPage'
 
-// Given('that the user is not logged in', () => {
-//     cy.visit('/');
-//     cy.get('[data-testid=menu-login-button]').should('be.visible');
-// });
-//
-// When('they look at any page in NVA', () => {
-//     const uuid = uuidv4();
-//     cy.visit(`/${uuid}`);
-// });
-//
-// Then('they see the Log in button', () => {
-//     cy.get('[data-testid=menu-login-button]').should('be.visible');
-// });
+Given('a User is on the "front" page', () => {
+    DLRMainPage.visit();
+});
+
+When('they type a Query in the "search" field they click Search', () => {
+    DLRMainPage.type("test");
+    DLRMainPage.pressSearch();
+});
+
+Then('they see a Result List of Resources', () => {
+    cy.url().should('include', '/search');
+});

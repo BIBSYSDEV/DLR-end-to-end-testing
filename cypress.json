@@ -1,4 +1,9 @@
 {
+  "env": {
+    "TAGS": "not @ignore"
+  },
+  "testFiles": "**/*.feature",
+  "defaultCommandTimeout": 6000,
   "baseUrl": "https://dlrdev.unit.no/",
   "video": false
 }
