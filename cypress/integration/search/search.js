@@ -6,7 +6,7 @@ Given('a User is on the "front" page', () => {
 });
 
 When('they type a Query in the "search" field they click Search', () => {
-    DLRMainPage.type("test");
+    DLRMainPage.typeQuery("test");
     DLRMainPage.pressSearch();
 });
 
