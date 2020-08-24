@@ -4,6 +4,8 @@ import DLRMainPage from '../../pages/DLRMainPage'
 Given('a Curator is logged in', () => {
     cy.login_curator();
     cy.visit("/")
+    cy.login_curator();
+    cy.visit("/")
 });
 
 When('they click the menu', () => {
