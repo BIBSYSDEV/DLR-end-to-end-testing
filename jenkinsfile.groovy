@@ -4,7 +4,7 @@ pipeline {
         nodejs "nodejs10110"
     }
     environment {
-        CURATOR_TOKEN = credentials('dlr_test_curator_token')
+        CYPRESS_CURATOR_TOKEN = credentials('dlr_test_curator_token')
     }
     stages {
         stage('Install') {
