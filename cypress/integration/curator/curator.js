@@ -6,6 +6,8 @@ Given('a Curator is logged in', () => {
 });
 
 When('they click the menu', () => {
+    cy.log('PCB')
+    cy.log(`token=${Cypress.env('CURATOR_TOKEN')}`)
     DLRMainPage.pressMenu();
 });
 
