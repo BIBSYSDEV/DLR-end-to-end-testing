@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "^4.12.1",
-    "cypress-cucumber-preprocessor": "^2.5.4",
+    "cypress-cucumber-preprocessor": "^2.5.5",
     "cypress-localstorage-commands": "^1.2.1"
   },
   "cypress-cucumber-preprocessor": {
