@@ -9,3 +9,4 @@ Add a cypress.env.json-file with the content:
 }
 ```
 
+(project inspired by https://medium.com/@itortv/how-to-integrate-cypress-and-cucumber-in-your-development-flow-in-just-a-few-weeks-96a46ac9165a)
