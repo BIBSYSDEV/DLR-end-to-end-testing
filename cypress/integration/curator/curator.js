@@ -1,18 +1,15 @@
 import {Given, When, Then} from 'cypress-cucumber-preprocessor/steps';
-import DLRMainPage from '../../pages/DLRMainPage'
 
 Given('a Curator is logged in', () => {
     cy.login_curator();
 });
 
 When('they click the menu', () => {
-    cy.log('PCB')
-    cy.log(`token=${Cypress.env('CURATOR_TOKEN')}`)
-    DLRMainPage.pressMenu();
+    cy.get(`[data-testid=menu_dropdown]`).click();
 });
 
 When('they click the "profile" menu item', () => {
-    DLRMainPage.pressProfileLink();
+    cy.get(`[data-testid=profile_page_link]`).click();
 });
 
 Then('they are routed to the "profile" page', () => {
