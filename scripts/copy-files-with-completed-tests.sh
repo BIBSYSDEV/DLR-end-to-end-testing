@@ -1,1 +1,1 @@
-cp -rf gherkin-features/profile.feature cypress/integration/
+cp -rf gherkin-features/*.feature cypress/integration/
