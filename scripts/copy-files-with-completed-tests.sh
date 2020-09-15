@@ -1,1 +1,0 @@
-cp -rf gherkin-features/*.feature cypress/integration/
