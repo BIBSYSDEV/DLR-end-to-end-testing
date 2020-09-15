@@ -1,3 +1,0 @@
-[submodule "gherkin-features"]
-	path = gherkin-features
-	url = https://github.com/BIBSYSDEV/DLR-scenarios
