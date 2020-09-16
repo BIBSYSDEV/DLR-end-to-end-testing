@@ -1,6 +1,17 @@
-# Cypress test for DLR (E2E)
+# Feature-descriptions and end to end tests for DLR
 
-Requirements:
+This project contains feature-descriptions of the DLR application.
+
+The features are written using Gherkin-syntax and is coupled to end-to-end tests. Jira-stories should reference to the corresponding feature.
+
+##Usage
+
+Run tests with 
+```
+npm run test
+```
+
+##Requirements:
 
 Add a cypress.env.json-file with the content:
 ```
@@ -9,11 +20,7 @@ Add a cypress.env.json-file with the content:
 }
 ```
 
-We use cypress-cucumber-preprocessor : https://github.com/TheBrainFamily/cypress-cucumber-preprocessor
-
 ```
 The .feature file will use steps definitions from a directory with the same name as your .feature file. The javascript files containing the step definitions can have other names if you want to break them into different concerns
 We also have a way to create reusable step definitions. Put them in cypress/integration/common/
 ```
-
-(this project is inspired by https://medium.com/@itortv/how-to-integrate-cypress-and-cucumber-in-your-development-flow-in-just-a-few-weeks-96a46ac9165a)
