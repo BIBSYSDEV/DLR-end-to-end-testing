@@ -15,7 +15,8 @@
     "cypress-cucumber-preprocessor": "^2.5.5",
     "cypress-localstorage-commands": "^1.2.1",
     "fs-extra": "^9.0.1",
-    "glob": "^7.1.6"
+    "glob": "^7.1.6",
+    "uuid": "^8.3.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
