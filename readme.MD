@@ -7,9 +7,17 @@ The features are written using Gherkin-syntax and is coupled to end-to-end tests
 ##Usage
 
 Run tests with 
-```
-npm run test
-```
+
+    npm run test
+
+To test a single feature (example): 
+
+    npx cypress run --spec cypress/integration/curatorCommunication.feature
+
+To run locally tests (with GUI): 
+
+    CYPRESS_BASE_URL=http://localhost:9999/ npx cypress open
+
 
 ##Requirements:
 
@@ -17,6 +25,9 @@ Add a cypress.env.json-file with the content:
 ```
 {
   "CURATOR_TOKEN": "<jwt token for test user with curator role>"
+  "PUBLISHER_TOKEN": "<jwt token>",
+  "ADMINISTRATOR_TOKEN": "<jwt token>",
+  "EDITOR_TOKEN": "<jwt token>"
 }
 ```
 

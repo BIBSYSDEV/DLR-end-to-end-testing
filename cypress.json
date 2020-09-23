@@ -2,6 +2,8 @@
   "env": {
     "TAGS": "not @notImplemented"
   },
+  "viewportWidth": 1500,
+  "viewportHeight": 1000,
   "testFiles": "**/*.feature",
   "defaultCommandTimeout": 6000,
   "baseUrl": "https://dlrdev.unit.no/",
