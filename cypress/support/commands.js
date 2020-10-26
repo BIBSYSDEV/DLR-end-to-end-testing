@@ -24,3 +24,7 @@ Cypress.Commands.add('login_publisher', () => {
     cy.visit(`/loginRedirect?token=${Cypress.env('PUBLISHER_TOKEN')}`);
     waitForLogin();
 });
+Cypress.Commands.add('login_kaltura_publisher', () => {
+    cy.visit(`/loginRedirect?token=${Cypress.env('KALTURA_PUBLISHER_TOKEN')}`);
+    waitForLogin();
+});

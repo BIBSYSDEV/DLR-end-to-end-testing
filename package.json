@@ -18,6 +18,9 @@
     "glob": "^7.1.6",
     "uuid": "^8.3.0"
   },
+  "devDependencies": {
+    "@testing-library/cypress": "^7.0.1"
+  },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
   }
