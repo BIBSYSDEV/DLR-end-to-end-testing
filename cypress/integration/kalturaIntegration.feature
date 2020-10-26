@@ -1,16 +1,18 @@
 Feature: Kaltura integration
 
-  @notImplemented
+  @changesState
   Scenario: All videos published in DLR by Kaltura-affiliated users should also be published in Kaltura
     Given A publisher who is affiliated with institutions who use Kaltura is logged in
     And starts a registration
     And registers a video
     When they perform the publication
-    Then the video is published in DLR as a link to Kaltura
+    Then the video is published in DLR
+    When they open the resource content tab
+    Then the Kaltura video has the correct embedding data
 
   Scenario: A user can view Kaltura videos who have been published from or imported in DLR
     When A user views a Kaltura video resource
-    And opens the resource content tab
+    And they open the resource content tab
     Then the Kaltura video has the correct embedding data
 
   @notImplemented
@@ -19,8 +21,8 @@ Feature: Kaltura integration
     And starts a registration
     And registers a link to Kaltura
     When they perform the publication
-    And opens the newly published resource
-    And opens the resource content tab
+    And they open the newly published resource
+    And they open the resource content tab
     Then a Kaltura URL is shown in the section for generated content
     And has the correct embedding data
 
@@ -40,4 +42,5 @@ Feature: Kaltura integration
     And click the import button on a Kaltura video from the list
     And they perform the publication
     Then the video is published in DLR
-    And the video metadata is stored in DLR
+    When they open the resource content tab
+    Then the Kaltura video has the correct embedding data

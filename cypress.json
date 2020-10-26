@@ -1,6 +1,6 @@
 {
   "env": {
-    "TAGS": "not @notImplemented"
+    "TAGS": "not @notImplemented and not @changesState"
   },
   "viewportWidth": 1500,
   "viewportHeight": 1000,
