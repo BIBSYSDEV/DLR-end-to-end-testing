@@ -2,7 +2,7 @@ import {Given, When, Then} from 'cypress-cucumber-preprocessor/steps';
 import '@testing-library/cypress/add-commands';
 import 'cypress-file-upload';
 
-Cypress.on('uncaught:exception', (err, runnable) => {
+Cypress.on('uncaught:exception', () => {
     return false;
 });
 
@@ -79,15 +79,19 @@ When('they click on the tab named Kaltura', () => {
 
 Then('they see a list of all the videos in Kaltura that they own', () => {
     cy.findByText(/ditt kaltura-innhold/i).should('exist');
-    cy.findByText(/søker/i).should('not exist');
+    cy.wait(3000);
+    cy.findByText(/søker/i).should('not.exist');
+    cy.get('.result-title-list').should('exist');
 });
 Then('each video that has not already been published in DLR has an import button next to it', () => {
+    cy.findByText(/start import/i).should('exist');
 });
 Then('the videos that are already published in DLR are not importable', () => {
+    //TODO: Finn ut hvordan en allerede importert video skal se ut i listen
 });
 
 //--------------------------------------------
 //Scenario: A Kaltura-affiliated publisher can publish a video from list of their own Kaltura videos in DLR
 When('click the import button on a Kaltura video from the list', () => {
-    cy.findAllByText(/importer/i).first().click();
+    cy.findByText(/start import/i).click();
 });
