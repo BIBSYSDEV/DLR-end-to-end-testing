@@ -34,7 +34,7 @@ Feature: Kaltura integration
     And each video that has not already been published in DLR has an import button next to it
     And the videos that are already published in DLR are not importable
 
-  @notImplemented
+  @changesState
   Scenario: A Kaltura-affiliated publisher can publish a video from list of their own Kaltura videos in DLR
     Given A publisher who is affiliated with institutions who use Kaltura is logged in
     And starts a registration
