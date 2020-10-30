@@ -6,6 +6,7 @@
   "scripts": {
     "test": "cypress run",
     "test:local": "CYPRESS_BASE_URL=http://localhost:9999/ npm run test",
+    "test:change-state": "./node_modules/.bin/cypress-tags run -e TAGS=\"@changesState\"",
     "test:pull-features": "git submodule update --remote gherkin-features/ && /bin/bash scripts/copy-files-with-completed-tests.sh"
   },
   "author": "",

@@ -52,26 +52,6 @@ When('A user views a Kaltura video resource', () => {
 });
 
 //--------------------------------------------
-// Scenario: A Publisher can publish a video in DLR from Kaltura link
-Given('A publisher is logged in', () => {
-    cy.login_publisher();
-});
-Given('registers a link to Kaltura', () => {
-    cy.get('tabnav').findByText("Lenke").click();
-    cy.findByPlaceholderText(/lenke/i).type('https://kaltura.no/jdsakjdsalkd');
-    cy.findByText(/Velg/i).click();
-    //TODO: Skriv inn en riktig Kaltura-lenke og trykk på 'opprett'-knappen
-});
-
-When('they open the newly published resource', () => {
-});
-
-Then('a Kaltura URL is shown in the section for generated content', () => {
-});
-Then('has the correct embedding data', () => {
-});
-
-//--------------------------------------------
 // Scenario: A Kaltura-affiliated publisher can view a list of their own Kaltura videos in DLR
 When('they click on the tab named Kaltura', () => {
     cy.findByText(/Kaltura/i).click();

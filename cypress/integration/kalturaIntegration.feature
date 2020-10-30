@@ -15,17 +15,6 @@ Feature: Kaltura integration
     And they open the resource content tab
     Then the Kaltura video has the correct embedding data
 
-  @notImplemented
-  Scenario: A Publisher can publish a video in DLR from Kaltura link
-    Given A publisher is logged in
-    And starts a registration
-    And registers a link to Kaltura
-    When they perform the publication
-    And they open the newly published resource
-    And they open the resource content tab
-    Then a Kaltura URL is shown in the section for generated content
-    And has the correct embedding data
-
   Scenario: A Kaltura-affiliated publisher can view a list of their own Kaltura videos in DLR
     Given A publisher who is affiliated with institutions who use Kaltura is logged in
     And starts a registration
