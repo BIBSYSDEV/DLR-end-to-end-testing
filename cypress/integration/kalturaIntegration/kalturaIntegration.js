@@ -64,7 +64,7 @@ Then('they see a list of all the videos in Kaltura that they own', () => {
     cy.get('.result-title-list').should('exist');
 });
 Then('each video that has not already been published in DLR has an import button next to it', () => {
-    cy.findByText(/start import/i).should('exist');
+    cy.findAllByText(/start import/i).first().should('exist');
 });
 Then('the videos that are already published in DLR are not importable', () => {
     //TODO: Finn ut hvordan en allerede importert video skal se ut i listen
@@ -73,5 +73,5 @@ Then('the videos that are already published in DLR are not importable', () => {
 //--------------------------------------------
 //Scenario: A Kaltura-affiliated publisher can publish a video from list of their own Kaltura videos in DLR
 When('click the import button on a Kaltura video from the list', () => {
-    cy.findByText(/start import/i).click();
+    cy.findAllByText(/start import/i).first().click();
 });
