@@ -64,10 +64,20 @@ Then('they see a list of all the videos in Kaltura that they own', () => {
     cy.get('.result-title-list').should('exist');
 });
 Then('each video that has not already been published in DLR has an import button next to it', () => {
-    cy.findAllByText(/start import/i).first().should('exist');
+    cy.get('.listViewItemWrapper')
+        .each(($el) => {
+            cy.wrap($el)
+                .findAllByText(/start import/i).first().parents('.listViewItemWrapper')
+                .findAllByText(/allerede importert/i).should('not.exist');
+        })
 });
 Then('the videos that are already published in DLR are not importable', () => {
-    //TODO: Finn ut hvordan en allerede importert video skal se ut i listen
+    cy.get('.listViewItemWrapper')
+        .each(($el) => {
+            cy.wrap($el)
+                .findAllByText(/allerede importert/i).first().parents('.listViewItemWrapper')
+                .findAllByText(/start import/i).should('not.exist');
+        })
 });
 
 //--------------------------------------------
