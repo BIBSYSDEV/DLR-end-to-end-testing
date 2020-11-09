@@ -6,6 +6,7 @@
   "scripts": {
     "test": "cypress run",
     "test:local": "CYPRESS_BASE_URL=http://localhost:9999/ npm run test",
+    "test:change-state": "./node_modules/.bin/cypress-tags run -e TAGS=\"@changesState\"",
     "test:pull-features": "git submodule update --remote gherkin-features/ && /bin/bash scripts/copy-files-with-completed-tests.sh"
   },
   "author": "",
@@ -17,6 +18,10 @@
     "fs-extra": "^9.0.1",
     "glob": "^7.1.6",
     "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@testing-library/cypress": "^7.0.1",
+    "cypress-file-upload": "4.1.1"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true

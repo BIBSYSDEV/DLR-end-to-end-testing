@@ -24,8 +24,9 @@ To run locally tests (with GUI):
 Add a cypress.env.json-file with the content:
 ```
 {
-  "CURATOR_TOKEN": "<jwt token for test user with curator role>"
+  "CURATOR_TOKEN": "<jwt token for test user with curator role>",
   "PUBLISHER_TOKEN": "<jwt token>",
+  "KALTURA_PUBLISHER_TOKEN": "<jwt token>",
   "ADMINISTRATOR_TOKEN": "<jwt token>",
   "EDITOR_TOKEN": "<jwt token>"
 }
